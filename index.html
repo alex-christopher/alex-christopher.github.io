@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- 1. Missing correct language code -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 2. Non-descriptive title -->
+    <title>Page</title>
+    <style>
+        /* 3. Poor color contrast */
+        body {
+            background-color: #ffffff;
+            color: #cccccc; /* Light gray text on white background */
+            font-family: Arial, sans-serif;
+        }
+
+        /* 4. Non-responsive text sizes */
+        h1, p {
+            font-size: 14px;
+        }
+
+        /* 5. No hover or focus states */
+        a {
+            color: blue;
+        }
+
+        button {
+            background: #000;
+            color: white;
+        }
+
+        /* 6. Poor line height */
+        p {
+            line-height: 1.1;
+        }
+
+        /* 7. Decorative images without context */
+        .decorative {
+            background: url('decorative.jpg') no-repeat;
+        }
+
+        /* 8. Overlapping text */
+        .overlap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <!-- 9. Missing skip link -->
+    
+    <!-- 10. Misused ARIA landmarks -->
+    <main role="complementary">
+        <header role="main">
+            <!-- 11. Header text not visible -->
+            <h1 style="visibility: hidden;">Welcome</h1>
+
+            <!-- 12. Missing alt attribute -->
+            <img src="logo.png">
+
+            <!-- 13. Links with same text but different destinations -->
+            <a href="page1.html">Learn more</a>
+            <a href="page2.html">Learn more</a>
+
+            <!-- 14. Unclear abbreviation -->
+            <p>The org grew YoY by 200%.</p>
+        </header>
+    </main>
+
+    <!-- 15. Misused table -->
+    <table>
+        <tr>
+            <td>Feature</td>
+            <td>Value</td>
+        </tr>
+    </table>
+
+    <!-- 16. Form without labels -->
+    <form>
+        <input type="text" placeholder="Enter name">
+        <textarea>Message here...</textarea>
+    </form>
+
+    <!-- 17. Missing button description -->
+    <button>Submit</button>
+
+    <!-- 18. Inconsistent navigation -->
+    <nav>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#"></a></li> <!-- Empty link -->
+            <li><a>Not a link</a></li> <!-- Non-interactive -->
+        </ul>
+    </nav>
+
+    <!-- 19. Unused ARIA roles -->
+    <div role="region"></div>
+
+    <!-- 20. Interactive elements without focus styles -->
+    <div tabindex="0">I am focusable</div>
+
+    <!-- 21. Video missing captions -->
+    <video src="video.mp4" autoplay></video>
+
+    <!-- 22. Audio missing controls -->
+    <audio src="audio.mp3" autoplay></audio>
+
+    <!-- 23. Distracting marquee -->
+    <marquee>Distracting text</marquee>
+
+    <!-- 24. Missing document language -->
+    <html lang="">
+
+    <!-- 25. Flashing elements -->
+    <blink>Flashing Text</blink>
+
+    <!-- 26. Images missing descriptions -->
+    <img src="photo.jpg">
+    <img src="icon.png">
+
+    <!-- 27. Empty button -->
+    <button></button>
+
+    <!-- 28. Same button text for different actions -->
+    <button>Submit</button>
+    <button>Submit</button>
+
+    <!-- 29. Overlapping elements -->
+    <div style="position: absolute; top: 0; left: 0; z-index: 2;">Overlapping</div>
+    <div style="position: absolute; top: 0; left: 0;">Under</div>
+
+    <!-- 30. Non-descriptive headings -->
+    <h1>Heading</h1>
+    <h2>Heading</h2>
+
+    <!-- 31. Missing headings -->
+    <section>
+        <p>Some content without a heading.</p>
+    </section>
+
+    <!-- 32. Nested interactive elements -->
+    <a href="#">
+        <button>Button inside link</button>
+    </a>
+
+    <!-- 33. Mismatched landmarks -->
+    <main>
+        <div role="main">Duplicate main content</div>
+    </main>
+
+    <!-- 34. Improper form controls -->
+    <form>
+        <input type="number">
+        <input type="text">
+    </form>
+
+    <!-- 35. Missing placeholder for input -->
+    <input type="text">
+
+    <!-- 36. Missing alt on decorative images -->
+    <img src="decorative.jpg">
+
+    <!-- 37. Overlapping interactive elements -->
+    <div tabindex="0" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;">Interactive</div>
+
+    <!-- 38. Poor keyboard navigation -->
+    <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </nav>
+
+    <!-- 39. Missing role in important content -->
+    <section>
+        <div>Content</div>
+    </section>
+
+    <!-- 40. Misused semantic elements -->
+    <footer>
+        <header>Footer content</header>
+    </footer>
+
+    <!-- 41. Incorrect heading order -->
+    <h3>Skipped Level</h3>
+
+    <!-- 42. Unused elements -->
+    <aside></aside>
+
+    <!-- 43. Poorly structured tables -->
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- 44. Hidden elements -->
+    <div style="display: none;">Hidden Content</div>
+
+    <!-- 45. Poor visual cues -->
+    <button style="background: transparent;">Invisible Button</button>
+
+    <!-- 46. ARIA misuse -->
+    <div aria-labelledby="label1">Misuse</div>
+
+    <!-- 47. Duplicated content -->
+    <p>Duplicate</p>
+    <p>Duplicate</p>
+
+    <!-- 48. Disorganized hierarchy -->
+    <section>
+        <article>
+            <header></header>
+            <footer></footer>
+        </article>
+    </section>
+
+    <!-- 49. Non-descriptive document -->
+    <article role="main">Content</article>
+
+    <!-- 50. Redundant ARIA labels -->
+    <h1 aria-label="Heading">Heading</h1>
+
+    <!-- More examples continue to reach 100 unique violations -->
+        <!-- 51. Non-interactive elements with event handlers -->
+        <div onclick="alert('I should not be clickable')">Click Me</div>
+
+        <!-- 52. Missing language for input -->
+        <input type="text" lang="">
+    
+        <!-- 53. Mismatched labels -->
+        <label for="input1">Name:</label>
+        <input id="input2" type="text">
+    
+        <!-- 54. Incorrect fieldset usage -->
+        <fieldset>
+            <legend>Personal Info</legend>
+            <!-- Missing associated form controls -->
+        </fieldset>
+    
+        <!-- 55. Redundant link text -->
+        <a href="page1.html">Click here</a>
+        <a href="page2.html">Click here</a>
+    
+        <!-- 56. No indication of external links -->
+        <a href="https://external.com">External Site</a>
+    
+        <!-- 57. Tables missing captions -->
+        <table>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </table>
+    
+        <!-- 58. Text in images without alt text -->
+        <img src="button-with-text.png">
+    
+        <!-- 59. Missing autocomplete attributes -->
+        <form>
+            <input type="text" name="email" placeholder="Email">
+        </form>
+    
+        <!-- 60. Overuse of aria-label -->
+        <div aria-label="This is a div" aria-labelledby="label1" role="region">Content</div>
+    
+        <!-- 61. Color used as sole indicator -->
+        <p style="color: red;">Error: Invalid input</p>
+    
+        <!-- 62. Non-descriptive table headers -->
+        <table>
+            <tr>
+                <th>Thing</th>
+                <th>Stuff</th>
+            </tr>
+        </table>
+    
+        <!-- 63. Missing required field indicators -->
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+        </form>
+    
+        <!-- 64. Form submission without validation -->
+        <form action="/submit">
+            <input type="text">
+            <button>Submit</button>
+        </form>
+    
+        <!-- 65. Missing language toggle mechanism -->
+        <div lang="fr">Bonjour!</div>
+    
+        <!-- 66. Poor focus order -->
+        <div tabindex="2">Second</div>
+        <div tabindex="1">First</div>
+    
+        <!-- 67. Irregular focus trapping -->
+        <div>
+            <input type="text" tabindex="-1">
+        </div>
+    
+        <!-- 68. No visible focus styles -->
+        <button style="outline: none;">Invisible Focus</button>
+    
+        <!-- 69. Redundant landmarks -->
+        <main>
+            <section role="main">
+                <article role="main"></article>
+            </section>
+        </main>
+    
+        <!-- 70. Broken ARIA relationships -->
+        <div aria-labelledby="nonexistent-label">Content</div>
+    
+        <!-- 71. Improper ARIA role usage -->
+        <h1 role="button">Heading as Button</h1>
+    
+        <!-- 72. Missing notification for dynamic updates -->
+        <div id="live-area" aria-live="off">
+            <p>Dynamic content updated here.</p>
+        </div>
+    
+        <!-- 73. Over-reliance on tooltips -->
+        <button title="Save changes">Icon</button>
+    
+        <!-- 74. Background animations without controls -->
+        <div style="animation: fade-in-out 2s infinite;"></div>
+    
+        <!-- 75. Poorly labeled modal -->
+        <div role="dialog" aria-labelledby="modal-header">
+            <!-- Missing close button -->
+            <h2>Modal Title</h2>
+            <p>Modal content here.</p>
+        </div>
+    
+        <!-- 76. Incorrect nesting of ARIA roles -->
+        <button>
+            <div role="button">Nested Button</div>
+        </button>
+    
+        <!-- 77. Missing tab panel functionality -->
+        <div role="tablist">
+            <button role="tab">Tab 1</button>
+            <button role="tab">Tab 2</button>
+        </div>
+    
+        <!-- 78. Missing input types -->
+        <input>
+    
+        <!-- 79. Complex forms without grouping -->
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname">
+        </form>
+    
+        <!-- 80. Missing alt text for linked images -->
+        <a href="page.html"><img src="image.jpg"></a>
+    
+        <!-- 81. No landmarks for important sections -->
+        <div>Main Content</div>
+    
+        <!-- 82. Page lacks meaningful headings -->
+        <div>
+            <h1></h1>
+            <p>Content without headings</p>
+        </div>
+    
+        <!-- 83. Forms without error handling -->
+        <form>
+            <input type="text">
+            <button>Submit</button>
+        </form>
+    
+        <!-- 84. Hidden content not aria-hidden -->
+        <div style="display: none;">Hidden but not aria-hidden</div>
+    
+        <!-- 85. Redundant form field labels -->
+        <label>Name</label>
+        <input aria-label="Name" type="text">
+    
+        <!-- 86. Missing visual cue for invalid fields -->
+        <input type="text" aria-invalid="true">
+    
+        <!-- 87. Non-interactive roles applied unnecessarily -->
+        <div role="button">Clickable</div>
+    
+        <!-- 88. Improper nesting of interactive elements -->
+        <a href="#">
+            <button>Click Me</button>
+        </a>
+    
+        <!-- 89. Missing descriptions for grouped radio buttons -->
+        <fieldset>
+            <legend>Choose an option:</legend>
+            <input type="radio" name="choice" value="1"> Option 1
+            <input type="radio" name="choice" value="2"> Option 2
+        </fieldset>
+    
+        <!-- 90. Missing captions for videos -->
+        <video src="example.mp4" controls></video>
+    
+        <!-- 91. Inconsistent alt text -->
+        <img src="product.jpg" alt="">
+    
+        <!-- 92. Decorative image with no role -->
+        <img src="decorative.png">
+    
+        <!-- 93. Missing "required" attributes -->
+        <form>
+            <input type="text">
+        </form>
+    
+        <!-- 94. ARIA roles without semantic meaning -->
+        <div role="list">Not a list</div>
+    
+        <!-- 95. Incorrect use of ARIA alert -->
+        <div role="alert">
+            <p>This is not an alert.</p>
+        </div>
+    
+        <!-- 96. Overlapping elements not visually separated -->
+        <div style="position: absolute;">Content</div>
+        <div style="position: absolute;">More content</div>
+    
+        <!-- 97. Dynamic updates without announcements -->
+        <div id="dynamic-content">No announcement of updates</div>
+    
+        <!-- 98. Improperly labeled iframe -->
+        <iframe src="example.html"></iframe>
+    
+        <!-- 99. Lack of unique page title -->
+        <title>Untitled</title>
+    
+        <!-- 100. Form submit button without descriptive label -->
+        <button></button>
+    </body>
+    </html>
+    
